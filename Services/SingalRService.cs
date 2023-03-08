@@ -20,7 +20,7 @@ namespace Services
         {
             // _menuUpdater = menuUpdater;
 
-#if RELEASE
+#if !RELEASE
             _connection = new HubConnectionBuilder()
                 .WithUrl($"https://signalrtest20230303170401.azurewebsites.net/{hubName}")
                 .Build();

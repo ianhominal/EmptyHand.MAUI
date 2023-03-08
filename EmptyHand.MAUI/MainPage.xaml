@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmptyHandv2.MainPage"
+             xmlns:assets="clr-namespace:EmptyHandv2.Resources.Assets"
+             Loaded="MainMenu_Loaded" BackgroundColor="#FFFAFAFA">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            VerticalOptions="FillAndExpand">
+
+            <!--<StackLayout>
+                <assets:CardView x:Name="cardView" />
+            </StackLayout>-->
+            
+            <Frame CornerRadius="10" BorderColor="Gray" HasShadow="True" Margin="10" VerticalOptions="Start" BackgroundColor="#FFFFFFFF">
+                <!-- Contenido de la tarjeta -->
+                <Grid>
+                    <assets:CardView HorizontalOptions="Start" Margin="15,0,0,0" RotationX="50" ShadowVisible="false"/>
+                    <assets:CardView HorizontalOptions="Start" Margin="65,0,0,0" Rotation="-15" RotationX="50"/>
+                    <assets:CardView HorizontalOptions="End" Margin="0,0,15,0" RotationX="50"/>
+                    <assets:CardView HorizontalOptions="End" Margin="0,0,65,0" Rotation="15" RotationX="50"/>
+                    <assets:CardView HorizontalOptions="Center"  RotationX="50"/>
+                    <Label HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="Start" Text="Empty Hand"></Label>
+                </Grid>
+            </Frame>
+
+
+
+        </VerticalStackLayout>
+        
+        
+    </ScrollView>
+
+</ContentPage>

@@ -33,7 +33,14 @@ namespace Domain.ViewModels
 
         public bool Border2Visible => faceUp;
 
-        public string Rank => faceUp ? rank : "";
+        public string Rank
+        {
+            get
+            {
+                return faceUp ? rank : "";
+            }
+            set { rank = value; }
+        }
 
         public string SuitChar => faceUp ? GetSuitChar(suit) : "";
 

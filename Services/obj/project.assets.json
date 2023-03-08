@@ -7506,22 +7506,20 @@
   },
   "packageFolders": {
     "C:\\Users\\ianho\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Repo\\EmptyHand.MAUI\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Repo\\EmptyHand.MAUI\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\Repo\\EmptyHand.MAUI\\Services\\Services.csproj",
+      "projectPath": "C:\\Repo\\EmptyHand.MAUI\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\ianho\\.nuget\\packages\\",
-      "outputPath": "D:\\Repo\\EmptyHand.MAUI\\Services\\obj\\",
+      "outputPath": "C:\\Repo\\EmptyHand.MAUI\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\ianho\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -7544,40 +7542,40 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
+            "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
             }
           }
         },
         "net6.0-android31.0": {
           "targetAlias": "net6.0-android",
           "projectReferences": {
-            "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
+            "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
             }
           }
         },
         "net6.0-ios16.1": {
           "targetAlias": "net6.0-ios",
           "projectReferences": {
-            "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
+            "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
             }
           }
         },
         "net6.0-maccatalyst16.1": {
           "targetAlias": "net6.0-maccatalyst",
           "projectReferences": {
-            "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
+            "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
             }
           }
         },
         "net6.0-windows10.0.19041": {
           "targetAlias": "net6.0-windows10.0.19041.0",
           "projectReferences": {
-            "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
+            "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Repo\\EmptyHand.MAUI\\Domain\\Domain.csproj"
             }
           }
         }

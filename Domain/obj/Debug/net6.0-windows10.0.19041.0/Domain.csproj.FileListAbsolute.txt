@@ -22,3 +22,15 @@ D:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.dll
 D:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\refint\Domain.dll
 D:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.pdb
 D:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\ref\Domain.dll
+C:\Repo\EmptyHand.MAUI\Domain\bin\Debug\net6.0-windows10.0.19041.0\Domain.deps.json
+C:\Repo\EmptyHand.MAUI\Domain\bin\Debug\net6.0-windows10.0.19041.0\Domain.dll
+C:\Repo\EmptyHand.MAUI\Domain\bin\Debug\net6.0-windows10.0.19041.0\Domain.pdb
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.csproj.AssemblyReference.cache
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.AssemblyInfoInputs.cache
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.AssemblyInfo.cs
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.csproj.CoreCompileInputs.cache
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.dll
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\refint\Domain.dll
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\Domain.pdb
+C:\Repo\EmptyHand.MAUI\Domain\obj\Debug\net6.0-windows10.0.19041.0\ref\Domain.dll

@@ -1,2 +1,0 @@
-C:\Users\ianho\source\repos\Domain\Domain.csproj;neutral
-C:\Users\ianho\source\repos\EmptyHandv2\EmptyHandv2.csproj;x64
