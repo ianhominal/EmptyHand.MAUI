@@ -1,9 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "omZLIv+31wVzLkNTR0vjrCXJFPyolqk/WOMzTcP+OAr8scuvEFR3sByVmYo7n1+q1Z7somR1K2nK6C2XM+YBxA==",
+  "dgSpecHash": "nlJmUtymR/DoMXc3p7cUUfbN+bOviu8nZ48WRpvUs3UYuqs+93JwgBuaxOIc2rXd4pfBJ6WUCs6Be4FWbOw/+g==",
   "success": true,
-  "projectFilePath": "C:\\Repo\\EmptyHand.MAUI\\Services\\Services.csproj",
+  "projectFilePath": "D:\\Repo\\EmptyHand.MAUI\\Services\\Services.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ianho\\.nuget\\packages\\google.apis\\1.60.0\\google.apis.1.60.0.nupkg.sha512",
+    "C:\\Users\\ianho\\.nuget\\packages\\google.apis.auth\\1.60.0\\google.apis.auth.1.60.0.nupkg.sha512",
+    "C:\\Users\\ianho\\.nuget\\packages\\google.apis.core\\1.60.0\\google.apis.core.1.60.0.nupkg.sha512",
+    "C:\\Users\\ianho\\.nuget\\packages\\google.apis.peopleservice.v1\\1.60.0.2924\\google.apis.peopleservice.v1.1.60.0.2924.nupkg.sha512",
     "C:\\Users\\ianho\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\ianho\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.3\\microsoft.aspnetcore.connections.abstractions.7.0.3.nupkg.sha512",
     "C:\\Users\\ianho\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\7.0.3\\microsoft.aspnetcore.http.connections.client.7.0.3.nupkg.sha512",

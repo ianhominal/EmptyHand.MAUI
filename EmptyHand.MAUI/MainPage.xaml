@@ -5,32 +5,25 @@
              xmlns:assets="clr-namespace:EmptyHandv2.Resources.Assets"
              Loaded="MainMenu_Loaded" BackgroundColor="#FFFAFAFA">
 
-    <ScrollView>
-        <VerticalStackLayout
+    <VerticalStackLayout
             Padding="30,0"
             VerticalOptions="FillAndExpand">
 
-            <!--<StackLayout>
-                <assets:CardView x:Name="cardView" />
-            </StackLayout>-->
-            
-            <Frame CornerRadius="10" BorderColor="Gray" HasShadow="True" Margin="10" VerticalOptions="Start" BackgroundColor="#FFFFFFFF">
-                <!-- Contenido de la tarjeta -->
-                <Grid>
-                    <assets:CardView HorizontalOptions="Start" Margin="15,0,0,0" RotationX="50" ShadowVisible="false"/>
-                    <assets:CardView HorizontalOptions="Start" Margin="65,0,0,0" Rotation="-15" RotationX="50"/>
-                    <assets:CardView HorizontalOptions="End" Margin="0,0,15,0" RotationX="50"/>
-                    <assets:CardView HorizontalOptions="End" Margin="0,0,65,0" Rotation="15" RotationX="50"/>
-                    <assets:CardView HorizontalOptions="Center"  RotationX="50"/>
-                    <Label HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="Start" Text="Empty Hand"></Label>
-                </Grid>
-            </Frame>
+        <Frame CornerRadius="10" BorderColor="Gray" HasShadow="True" Margin="10" VerticalOptions="Start" BackgroundColor="#FFFFFFFF">
+            <!-- Contenido de la tarjeta -->
+            <Grid x:Name="grdTitle"/>
+        </Frame>
+
+        <Button Clicked="NewGame_Clicked" Text="New Game" TextColor="White" BorderColor="#21005D" Margin="10" HeightRequest="60"  BackgroundColor="#FF673AB7" >
+
+        </Button>
+
+     
 
 
 
-        </VerticalStackLayout>
-        
-        
-    </ScrollView>
+        <ScrollView>
+        </ScrollView>
+    </VerticalStackLayout>
 
 </ContentPage>

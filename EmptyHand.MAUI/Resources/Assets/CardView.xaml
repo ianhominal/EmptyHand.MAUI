@@ -3,26 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="EmptyHandv2.Resources.Assets.CardView">
 
-    <Grid
-        BackgroundColor="#00FFFFFF"
+    <Grid BackgroundColor="#00000000"
         MaximumWidthRequest="100"
         MaximumHeightRequest="100"
         WidthRequest="{Binding CardWidth}"
         HeightRequest="{Binding CardHeight}">
 
-        <Border BackgroundColor="DarkGray"
-            Margin="6,6,0,0"
+        <Border BackgroundColor="#cc565656"
+            Margin="{Binding ShadowMargin}"
             StrokeThickness="1"
-            MaximumWidthRequest="100"
-            MaximumHeightRequest="100"
+            IsVisible="{Binding ShadowVisible}"
             WidthRequest="{Binding CardWidth}"
             HeightRequest="{Binding CardHeight}">
             <Border.Stroke>
-                <SolidColorBrush Color="DarkGray"/>
+                <SolidColorBrush Color="#cc565656"/>
             </Border.Stroke>
         </Border>
 
-        <Grid IsVisible="{Binding FaceUp}" >
+        <Grid IsVisible="{Binding FaceUp}" BackgroundColor="#00000000" >
 
             <Border BackgroundColor="White"
                 StrokeThickness="2">
@@ -31,19 +29,10 @@
                 </Border.Stroke>
             </Border>
 
-            <Border 
-                StrokeThickness="2"
-                Margin="5">
-                <Border.Stroke>
-                    <SolidColorBrush Color="Black"/>
-                </Border.Stroke>
-            </Border>
 
-            <Border 
+            <Border BackgroundColor="#FFFFFFFF"
                 StrokeThickness="1"
-                IsVisible="{Binding ShadowVisible}"
                 Margin="5">
-                
                 <Border.StrokeShape>
                     <RoundRectangle CornerRadius="5,5,5,5" />
                 </Border.StrokeShape>
@@ -56,31 +45,31 @@
                         FontSize="25"
                         FontAttributes="Bold"
                         FontFamily="Segoe UI"
-                        TextColor="{Binding CardColor}"
+                        TextColor="{Binding RankColor}"
                         HorizontalOptions="Start"
                         VerticalOptions="Start" 
                         Margin="10,5,0,0"/>
 
             <Label  Text="{Binding SuitChar}"
                         FontSize="10"
-                        TextColor="{Binding CardColor}" 
+                        TextColor="{Binding RankColor}" 
                         VerticalOptions="Start" 
                         HorizontalOptions="End"
-                        Margin="8,10,10,8"/>
+                        Margin="0,10,10,0"/>
 
             <Label  Text="{Binding SuitChar}"
                         FontSize="10"
-                        TextColor="{Binding CardColor}"
+                        TextColor="{Binding RankColor}"
                         HorizontalOptions="Start"
                         VerticalOptions="End"
-                        Margin="8,0,0,8"/>
+                        Margin="10,0,0,9"/>
 
             <Label Text="{Binding SuitChar}"
                     FontSize="26"
-                    TextColor="{Binding CardColor}"
+                    TextColor="{Binding RankColor}"
                     VerticalOptions="End"
                     HorizontalOptions="End"
-                    Margin="0,0,3,5"/>
+                    Margin="0,0,8,9"/>
             </Grid>
 
         <Grid IsVisible="{Binding FaceDown}">

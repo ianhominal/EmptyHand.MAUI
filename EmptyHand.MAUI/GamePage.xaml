@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EmptyHandv2.GamePage"
+             Title="GamePage">
+    <VerticalStackLayout>
+        <CollectionView x:Name="cardListTestView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid BackgroundColor="#00000000"
+                        WidthRequest="{Binding CardWidth}"
+                        HeightRequest="{Binding CardHeight}"
+                          RotationX="{Binding RotationX}" 
+                          Rotation="{Binding Rotation}" 
+                          RotationY="{Binding RotationY}" 
+                          Margin="3">
+
+                        <Border BackgroundColor="#cc565656"
+            Margin="{Binding ShadowMargin}"
+            StrokeThickness="1"
+            IsVisible="{Binding ShadowVisible}"
+            WidthRequest="{Binding CardWidth}"
+            HeightRequest="{Binding CardHeight}">
+                            <Border.Stroke>
+                                <SolidColorBrush Color="#cc565656"/>
+                            </Border.Stroke>
+                        </Border>
+
+                        <Grid IsVisible="{Binding FaceUp}" BackgroundColor="#00000000" >
+
+                            <Border BackgroundColor="White"
+                StrokeThickness="2">
+                                <Border.Stroke>
+                                    <SolidColorBrush Color="Black"/>
+                                </Border.Stroke>
+                            </Border>
+
+
+                            <Border BackgroundColor="#FFFFFFFF"
+                StrokeThickness="1"
+                Margin="5">
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="5,5,5,5" />
+                                </Border.StrokeShape>
+                                <Border.Stroke>
+                                    <SolidColorBrush Color="DarkGray"/>
+                                </Border.Stroke>
+                            </Border>
+
+                            <Label  Text="{Binding Rank}"
+                        FontSize="25"
+                        FontAttributes="Bold"
+                        FontFamily="Segoe UI"
+                        TextColor="{Binding RankColor}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="Start" 
+                        Margin="10,5,0,0"/>
+
+                            <Label  Text="{Binding SuitChar}"
+                        FontSize="10"
+                        TextColor="{Binding RankColor}" 
+                        VerticalOptions="Start" 
+                        HorizontalOptions="End"
+                        Margin="0,10,10,0"/>
+
+                            <Label  Text="{Binding SuitChar}"
+                        FontSize="10"
+                        TextColor="{Binding RankColor}"
+                        HorizontalOptions="Start"
+                        VerticalOptions="End"
+                        Margin="10,0,0,9"/>
+
+                            <Label Text="{Binding SuitChar}"
+                    FontSize="26"
+                    TextColor="{Binding RankColor}"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Margin="0,0,8,9"/>
+                        </Grid>
+
+                        <Grid IsVisible="{Binding FaceDown}">
+                            <Border BackgroundColor="DarkBlue"
+                StrokeThickness="2">
+                                <Border.Stroke>
+                                    <SolidColorBrush Color="Black"/>
+                                </Border.Stroke>
+                            </Border>
+                        </Grid>
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal" />
+            </CollectionView.ItemsLayout>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

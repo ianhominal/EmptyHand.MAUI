@@ -1,9 +1,8 @@
 using Domain.ViewModels;
-
 namespace EmptyHandv2.Resources.Assets;
 public partial class CardView : ContentView
 {
-    private CardViewModel viewModel;
+    public CardViewModel viewModel { get; set; }
 
     public CardView()
     {
@@ -17,28 +16,19 @@ public partial class CardView : ContentView
         BindingContext = this.viewModel = viewModel;
     }
 
-    public string Rank
+
+    public bool ShadowVisible
     {
-        get { return viewModel.Rank; }
-        set { viewModel.Rank = value; }
+        get { return viewModel.ShadowVisible; }
+        set { viewModel.ShadowVisible = value; }
     }
 
-    public static readonly BindableProperty ShadowVisibleProperty =
-           BindableProperty.Create(nameof(ShadowVisible), typeof(bool?), typeof(CardView), default(bool?), propertyChanged: OnShadowVisiblePropertyChanged);
-
-    private static void OnShadowVisiblePropertyChanged(BindableObject bindable, object oldValue, object newValue)
+    public Thickness ShadowMargin
     {
-        if (newValue != null)
-        {
-            ((CardView)bindable).InvalidateMeasure();
-        }
+        get { return viewModel.ShadowMargin; }
+        set { viewModel.ShadowMargin = value; }
     }
 
-    public bool? ShadowVisible
-    {
-        get { return (bool?)GetValue(ShadowVisibleProperty); }
-        set { SetValue(ShadowVisibleProperty, value); }
-    }
 
     public void Flip()
     {
