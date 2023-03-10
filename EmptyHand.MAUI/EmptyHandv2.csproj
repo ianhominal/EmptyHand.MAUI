@@ -75,6 +75,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="MainMenu.xaml.cs">
+	    <DependentUpon>MainMenu.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\Assets\CardView.xaml.cs">
 	    <DependentUpon>CardView.xaml</DependentUpon>
 	  </Compile>

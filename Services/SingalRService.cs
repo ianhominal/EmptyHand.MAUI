@@ -13,7 +13,7 @@ namespace Services
     public class SignalRService
     {
         private readonly HubConnection _connection;
-        private static IGameUpdater gameUpdater;
+        private static IGame actualGame;
         private static IMenuUpdater menuUpdater;
 
         public SignalRService(string hubName)
@@ -63,24 +63,24 @@ namespace Services
         }
 
 
-        public void SetGameUpdater(IGameUpdater _gameUpdater)
+        public void SetGameUpdater(IGame _gameUpdater)
         {
-            gameUpdater = _gameUpdater;
+            actualGame = _gameUpdater;
 
             _connection.On<string>("UpdateGameState", (gameStateJson) =>
             {
                 var gameState = JsonConvert.DeserializeObject<GameModel>(gameStateJson);
-                gameUpdater.UpdateGame(gameState);
+                actualGame.UpdateGame(gameState);
             });
 
             _connection.On<bool>("ForceEndTurn", (endTurn) =>
             {
-                gameUpdater.ForceEndTurn();
+                actualGame.ForceEndTurn();
             });
 
             _connection.On<string>("CloseGame", (enemyPlayer) =>
             {
-                gameUpdater.CloseGame();
+                actualGame.CloseGame();
                 menuUpdater.GameClosed(enemyPlayer);
             });
         }
@@ -119,6 +119,7 @@ namespace Services
 
             await _connection.InvokeAsync("UpdateGameState", JsonConvert.SerializeObject(gameState));
         }
+
 
 
         public async Task CheckIfPlayerCanPlay(GameModel gameState)

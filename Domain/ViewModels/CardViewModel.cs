@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,38 +10,39 @@ namespace Domain.ViewModels
 {
     public class CardViewModel : INotifyPropertyChanged
     {
-        private const int cardWidth = 66;
-        private const int cardHeight = 93;
-        private string suit;
-        private string rank;
+        private CardModel cardModel;
         private bool faceUp;
         private bool shadowVisible = true;
-        private Thickness shadowMargin = new Thickness(4,4,0,0);
+        private Thickness shadowMargin = new Thickness(4, 4, 0, 0);
         double rotation = 0;
         double rotationX = 0;
         double rotationY = 0;
 
-
-        public CardViewModel(string suit, string rank, bool faceUp = true)
+        public CardViewModel(CardModel cardModel, bool faceUp = true)
         {
-            this.suit = suit;
-            this.rank = rank;
+            this.cardModel = cardModel;
             this.faceUp = faceUp;
         }
 
-        public int CardWidth => cardWidth;
+        public int CardWidth => 66;
 
-        public int CardHeight => cardHeight;
+        public int CardHeight => 93;
 
-        public bool FaceUp => faceUp;
+        public bool FaceUp
+        {
+            get { return faceUp; }
+            set
+            {
+                faceUp = value;
+                UpdateCardView();
+            }
+        }
+
         public bool FaceDown => !faceUp;
 
         public bool ShadowVisible
         {
-            get
-            {
-                return shadowVisible;
-            }
+            get { return shadowVisible; }
             set
             {
                 shadowVisible = value;
@@ -50,10 +52,7 @@ namespace Domain.ViewModels
 
         public Thickness ShadowMargin
         {
-            get
-            {
-                return shadowMargin;
-            }
+            get { return shadowMargin; }
             set
             {
                 shadowMargin = value;
@@ -61,53 +60,43 @@ namespace Domain.ViewModels
             }
         }
 
-        public string Rank => faceUp ? rank : "";
+        public string Rank => faceUp ? cardModel.Rank : "";
 
-        public string SuitChar => faceUp ? GetSuitChar(suit) : "";
+        public string SuitChar => faceUp ? GetSuitChar(cardModel.Suit) : "";
 
-        public Color SuitColor => (suit == "Hearts" || suit == "Diamonds") ? Colors.Red : Colors.Black;
-        public Color RankColor => (suit == "Hearts" || suit == "Diamonds") ? Colors.Red : Colors.Black;
+        public Color SuitColor => (cardModel.Suit == "Hearts" || cardModel.Suit == "Diamonds") ? Colors.Red : Colors.Black;
 
+        public Color RankColor => (cardModel.Suit == "Hearts" || cardModel.Suit == "Diamonds") ? Colors.Red : Colors.Black;
 
         public double Rotation
         {
-            get
-            {
-                return rotation;
-            }
+            get { return rotation; }
             set
             {
                 rotation = value;
                 OnPropertyChanged("Rotation");
             }
         }
+
         public double RotationX
         {
-            get
-            {
-                return rotationX;
-            }
+            get { return rotationX; }
             set
             {
                 rotationX = value;
                 OnPropertyChanged("RotationX");
             }
         }
+
         public double RotationY
         {
-            get
-            {
-                return rotationY;
-            }
+            get { return rotationY; }
             set
             {
                 rotationY = value;
                 OnPropertyChanged("RotationY");
             }
         }
-
-
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -128,17 +117,15 @@ namespace Domain.ViewModels
                 case "Clubs":
                     return "♣";
                 case "Diamonds":
-                    return  "♦";
+                    return "♦";
                 case "Hearts":
-                    return  "♥" ;
+                    return "♥";
                 case "Spades":
                     return "♠";
-                default: 
+                default:
                     return "";
             }
         }
-
-
 
         public void Flip()
         {
@@ -158,4 +145,5 @@ namespace Domain.ViewModels
             RaisePropertyChanged("RankColor");
         }
     }
+
 }

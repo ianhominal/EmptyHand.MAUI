@@ -18,17 +18,25 @@ namespace Domain.Models
             PlayerPoints = 0;
             PlayerRoundsWins = 0;
             PlayerMail = playerMail;
+
+            PlayerCards = new List<CardModel>();
+            PlayerLifeCards = new List<CardModel>();
         }
 
         public string PlayerId { get; set; }
         public string PlayerHubId { get; set; }
-        public List<CardViewModel> PlayerCards { get; set; }
-        public List<CardViewModel> PlayerLifeCards { get; set; }
+        public List<CardModel> PlayerCards { get; set; }
+        public List<CardModel> PlayerLifeCards { get; set; }
         public int PlayerPoints { get; set; }
         public int PlayerRoundsWins { get; set; }
         public string PlayerName { get; set; }
         public string PlayerPhoto { get; set; }
         public string PlayerMail { get; set; }
 
+        // Método para convertir de CardModel a CardViewModel
+        public CardViewModel ToCardViewModel(CardModel cardModel)
+        {
+            return new CardViewModel(cardModel);
+        }
     }
 }
