@@ -144,6 +144,9 @@ namespace Domain.ViewModels
             RaisePropertyChanged("SuitColor");
             RaisePropertyChanged("RankColor");
         }
+
+
+        
     }
 
 }

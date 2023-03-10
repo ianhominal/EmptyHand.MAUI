@@ -12,8 +12,8 @@ namespace Domain.ViewModels
         public PlayerViewModel(PlayerModel playerModel)
         {
             this.playerModel = playerModel;
-            PlayerCards = new ObservableCollection<CardViewModel>(playerModel.PlayerCards);
-            PlayerLifeCards = new ObservableCollection<CardViewModel>(playerModel.PlayerLifeCards);
+            PlayerCards = new ObservableCollection<CardViewModel>(playerModel.PlayerCards.Select( c => c.ToCardViewModel())); 
+            PlayerLifeCards = new ObservableCollection<CardViewModel>(playerModel.PlayerCards.Select(c => c.ToCardViewModel()));
         }
 
         public string PlayerId => playerModel.PlayerId;

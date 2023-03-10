@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +28,12 @@ namespace Domain.Models
         {
             get { return rank; }
             set { rank = value; }
+        }
+
+        // Método para convertir de CardModel a CardViewModel
+        public CardViewModel ToCardViewModel()
+        {
+            return new CardViewModel(this);
         }
     }
 }

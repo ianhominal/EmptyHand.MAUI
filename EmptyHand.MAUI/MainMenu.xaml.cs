@@ -40,7 +40,7 @@ public partial class MainMenu : ContentPage
         };
 
         // Crear las cartas
-        CardView card1 = new CardView(new CardViewModel("Clubs", "10"))
+        CardView card1 = new CardView(new CardModel().ToModel()("Clubs", "10"))
         {
             HorizontalOptions = LayoutOptions.Center,
             ShadowMargin = new Thickness(-4, 4, 0, 0),
