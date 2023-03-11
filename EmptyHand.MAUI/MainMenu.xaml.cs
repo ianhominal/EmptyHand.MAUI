@@ -1,24 +1,30 @@
-﻿using Domain.ViewModels;
+﻿using Domain.Interfaces;
+using Domain.Models;
 using EmptyHandv2.Resources.Assets;
-using System.Collections.ObjectModel;
+using Services;
 
 namespace EmptyHandv2;
 
 
 
-public partial class MainMenu : ContentPage
+public partial class MainMenu : ContentPage, IMainMenu
 {
+    GoogleService googleService;
 
 
     public MainMenu()
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
+        googleService = new GoogleService();
 
 
     }
-
-	private void DrawTitle()
-	{
+    private void MainMenu_Loaded(object sender, EventArgs e)
+    {
+        DrawTitle();
+    }
+    private void DrawTitle()
+    {
         // Crear el label
         Label emptyHandLabel = new Label()
         {
@@ -40,7 +46,7 @@ public partial class MainMenu : ContentPage
         };
 
         // Crear las cartas
-        CardView card1 = new CardView(new CardModel().ToModel()("Clubs", "10"))
+        CardView card1 = new CardView(new CardModel("Ckubs", "10").ToCardViewModel())
         {
             HorizontalOptions = LayoutOptions.Center,
             ShadowMargin = new Thickness(-4, 4, 0, 0),
@@ -49,7 +55,7 @@ public partial class MainMenu : ContentPage
             RotationX = 50
         };
 
-        CardView card2 = new CardView(new CardViewModel("Diamonds", "J"))
+        CardView card2 = new CardView(new CardModel("Diamonds", "J").ToCardViewModel())
         {
             HorizontalOptions = LayoutOptions.Center,
             ShadowMargin = new Thickness(-4, 4, 0, 0),
@@ -58,7 +64,7 @@ public partial class MainMenu : ContentPage
             RotationX = 50
         };
 
-        CardView card3 = new CardView(new CardViewModel("Clubs", "A"))
+        CardView card3 = new CardView(new CardModel("Clubs", "A").ToCardViewModel())
         {
             HorizontalOptions = LayoutOptions.Center,
             ShadowMargin = new Thickness(4, 4, 0, 0),
@@ -67,7 +73,7 @@ public partial class MainMenu : ContentPage
             RotationX = 50
         };
 
-        CardView card4 = new CardView(new CardViewModel("Hearts", "K"))
+        CardView card4 = new CardView(new CardModel("Hearts", "K").ToCardViewModel())
         {
             HorizontalOptions = LayoutOptions.Center,
             ShadowMargin = new Thickness(4, 4, 0, 0),
@@ -76,7 +82,7 @@ public partial class MainMenu : ContentPage
             RotationX = 50
         };
 
-        CardView card5 = new CardView(new CardViewModel("Spades", "Q"))
+        CardView card5 = new CardView(new CardModel("Spades", "Q").ToCardViewModel())
         {
             HorizontalOptions = LayoutOptions.Center,
             ShadowMargin = new Thickness(0, 5, 0, 0),
@@ -96,12 +102,6 @@ public partial class MainMenu : ContentPage
     }
 
 
-
-    private void MainMenu_Loaded(object sender, EventArgs e)
-    {
-        DrawTitle();
-    }
-
     private async void NewGame_Clicked(object sender, EventArgs e)
     {
         await this.Navigation.PushAsync(new GamePage());
@@ -111,8 +111,35 @@ public partial class MainMenu : ContentPage
     {
         // Aquí puedes agregar el código que deseas ejecutar cuando se hace clic en un elemento del CollectionView
         var selectedGame = (sender as Image)?.BindingContext;
+    }
 
+    private async void OnLoginClicked(object sender, EventArgs e)
+    {
+        await googleService.GoogleLogin();
+    }
+    
 
+    public void RefreshGameList(List<GameModel> games)
+    {
+        CVOnlineGames.Dispatcher.Dispatch(() =>
+        {
+            CVOnlineGames.ItemsSource = games;
+        });
+    }
+
+    public void CreateNewGame(GameModel game)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void StartNewGame(GameModel game)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void GameClosed(string enemyPlayer)
+    {
+        throw new NotImplementedException();
     }
 }
 

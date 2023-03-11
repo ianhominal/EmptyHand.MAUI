@@ -1,3 +1,4 @@
+using Domain.Models;
 using Domain.ViewModels;
 namespace EmptyHandv2.Resources.Assets;
 public partial class CardView : ContentView
@@ -7,7 +8,7 @@ public partial class CardView : ContentView
     public CardView()
     {
         InitializeComponent();
-        BindingContext = viewModel = new CardViewModel("Diamonds", "A");
+        BindingContext = viewModel = new CardModel("Diamonds", "A").ToCardViewModel();
     }
 
     public CardView(CardViewModel viewModel)

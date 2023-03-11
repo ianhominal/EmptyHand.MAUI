@@ -3,7 +3,7 @@
   <PropertyGroup>
     <IsFirstTimeProjectOpen>False</IsFirstTimeProjectOpen>
     <ActiveDebugFramework>net6.0-android</ActiveDebugFramework>
-    <ActiveDebugProfile>Android Emulator</ActiveDebugProfile>
+    <ActiveDebugProfile>Motorola edge 20 pro (Android 12.0 - API 31)</ActiveDebugProfile>
     <SelectedPlatformGroup>PhysicalDevice</SelectedPlatformGroup>
     <DefaultDevice>pixel_5_-_api_33</DefaultDevice>
   </PropertyGroup>

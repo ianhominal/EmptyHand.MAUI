@@ -5,6 +5,7 @@
              xmlns:assets="clr-namespace:EmptyHandv2.Resources.Assets"
              Loaded="MainMenu_Loaded" BackgroundColor="#FFFAFAFA">
 
+
     <VerticalStackLayout
             Padding="30,0"
             VerticalOptions="FillAndExpand">
@@ -14,43 +15,59 @@
             <Grid x:Name="grdTitle"/>
         </Frame>
 
-        <Button Clicked="NewGame_Clicked" Text="New Game" TextColor="White" BorderColor="#21005D" Margin="10" HeightRequest="60"  BackgroundColor="#FF673AB7" />
+        <Grid x:Name="GrdLogin">
 
-        <CollectionView x:Name="CVOnlineGames" ItemsSource="{Binding OnlineGames}">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid>
-                        <Frame 
+            <!-- Botón de inicio de sesión de Google -->
+            <Grid RowSpacing="0" ColumnSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!--<Image Source="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" HeightRequest="24" WidthRequest="24" Grid.Column="0" Margin="0,0,8,0"/>-->
+
+                <Button Text="Sign in with Google" Grid.Column="1" Clicked="OnLoginClicked"/>
+            </Grid>
+        </Grid>
+
+        <Grid x:Name="GrdMenu">
+            <Button Clicked="NewGame_Clicked" Text="New Game" TextColor="White" BorderColor="#21005D" Margin="10" HeightRequest="60"  BackgroundColor="#FF673AB7" />
+
+            <CollectionView x:Name="CVOnlineGames">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Frame 
                             Margin="200,0,0,0"
                             WidthRequest="200"
                             HeightRequest="80"
                             BackgroundColor="#FF673AB7"
                             Padding="0">
-                            <Label Text="{Binding PlayerName}" TextColor="#FFFFFFFF"/>
-                        </Frame>
-                        <Frame
+                                <Label Text="{Binding PlayerName}" TextColor="#FFFFFFFF"/>
+                            </Frame>
+                            <Frame
                             BackgroundColor="Transparent"
                             BorderColor="Gray"
                             CornerRadius="50"
                             HasShadow="True"
                             Padding="0">
-                            <Image
+                                <Image
                                 Source="{Binding PlayerPhoto}"
                                 Aspect="AspectFill">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer
                                 Tapped="OnGameTapped"
                                 NumberOfTapsRequired="1"/>
-                                </Image.GestureRecognizers>
-                            </Image>
-                        </Frame>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                                    </Image.GestureRecognizers>
+                                </Image>
+                            </Frame>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
 
-        <ScrollView>
-        </ScrollView>
+
     </VerticalStackLayout>
 
 </ContentPage>

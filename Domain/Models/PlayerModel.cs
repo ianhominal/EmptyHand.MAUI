@@ -33,6 +33,12 @@ namespace Domain.Models
         public string PlayerPhoto { get; set; }
         public string PlayerMail { get; set; }
 
-       
+        // Método para convertir de CardModel a CardViewModel
+        public PlayerViewModel ToCardViewModel()
+        {
+            return new PlayerViewModel(this);
+        }
+
+
     }
 }

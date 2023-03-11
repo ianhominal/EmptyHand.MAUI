@@ -14,7 +14,7 @@ namespace Services
     {
         private readonly HubConnection _connection;
         private static IGame actualGame;
-        private static IMenuUpdater menuUpdater;
+        private static IMainMenu menuUpdater;
 
         public SignalRService(string hubName)
         {
@@ -33,7 +33,7 @@ namespace Services
         }
 
 
-        public void SetMenuUpdater(IMenuUpdater _menuUpdater)
+        public void SetMenuUpdater(IMainMenu _menuUpdater)
         {
             menuUpdater = _menuUpdater;
 

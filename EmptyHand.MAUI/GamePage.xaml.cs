@@ -1,3 +1,4 @@
+using Domain.Models;
 using Domain.ViewModels;
 using System.Collections.ObjectModel;
 
@@ -11,11 +12,11 @@ public partial class GamePage : ContentPage
 
         var cards = new ObservableCollection<CardViewModel>
         {
-            new CardViewModel("Diamonds", "A") ,
-            new CardViewModel("Spades", "J")   ,
-            new CardViewModel("Clubs", "10")    ,
-            new CardViewModel("Hearts", "Q")    ,
-            new CardViewModel("Diamonds", "K") ,
+            new CardModel("Diamonds", "A").ToCardViewModel() ,
+            new CardModel("Spades", "J").ToCardViewModel() ,
+            new CardModel("Clubs", "10").ToCardViewModel()  ,
+            new CardModel("Hearts", "Q").ToCardViewModel()  ,
+            new CardModel("Diamonds", "K").ToCardViewModel() ,
         };
 
         // Asignamos la lista al ItemsSource del CollectionView

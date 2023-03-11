@@ -17,14 +17,16 @@ namespace Services
     {
         UserCredential? credential;
 
-        public async Task<Payload> GoogleLogin()
-        {
-            var clientSecrets = new ClientSecrets
-            {
-                ClientId = "35469603597-htfvps87d81eqfe57r9n65g8iejb41fm.apps.googleusercontent.com",
-                ClientSecret = "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"
-            };
+        public const string ClientId = "35469603597-htfvps87d81eqfe57r9n65g8iejb41fm.apps.googleusercontent.com";
 
+        public static readonly ClientSecrets clientSecrets = new ClientSecrets
+        {
+            ClientId = "35469603597-htfvps87d81eqfe57r9n65g8iejb41fm.apps.googleusercontent.com",
+            ClientSecret = "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"
+        };
+
+    public async Task<Payload> GoogleLogin()
+        {
             credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
                 clientSecrets,
                 new[] { PeopleServiceService.Scope.UserinfoProfile, PeopleServiceService.Scope.UserinfoEmail },

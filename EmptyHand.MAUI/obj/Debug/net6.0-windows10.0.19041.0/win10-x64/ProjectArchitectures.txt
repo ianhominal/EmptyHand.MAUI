@@ -1,0 +1,4 @@
+D:\Repo\EmptyHand.MAUI\Domain\Domain.csproj;neutral
+D:\Repo\EmptyHand.MAUI\Domain\Domain.csproj;neutral
+D:\Repo\EmptyHand.MAUI\EmptyHand.MAUI\EmptyHandv2.csproj;x64
+D:\Repo\EmptyHand.MAUI\Services\Services.csproj;neutral

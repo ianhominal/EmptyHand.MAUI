@@ -721,6 +721,21 @@
     <AppxPackagedFile Include="C:\Users\ianho\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.28\lib\net6.0\WinRT.Runtime.dll">
       <PackagePath>WinRT.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ianho\.nuget\packages\google.apis\1.60.0\lib\netstandard2.0\Google.Apis.dll">
+      <PackagePath>Google.Apis.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ianho\.nuget\packages\google.apis.auth\1.60.0\lib\netstandard2.0\Google.Apis.Auth.PlatformServices.dll">
+      <PackagePath>Google.Apis.Auth.PlatformServices.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ianho\.nuget\packages\google.apis.auth\1.60.0\lib\netstandard2.0\Google.Apis.Auth.dll">
+      <PackagePath>Google.Apis.Auth.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ianho\.nuget\packages\google.apis.core\1.60.0\lib\netstandard2.0\Google.Apis.Core.dll">
+      <PackagePath>Google.Apis.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\ianho\.nuget\packages\google.apis.peopleservice.v1\1.60.0.2924\lib\netstandard2.0\Google.Apis.PeopleService.v1.dll">
+      <PackagePath>Google.Apis.PeopleService.v1.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\ianho\.nuget\packages\microsoft.aspnetcore.connections.abstractions\7.0.3\lib\netstandard2.1\Microsoft.AspNetCore.Connections.Abstractions.dll">
       <PackagePath>Microsoft.AspNetCore.Connections.Abstractions.dll</PackagePath>
     </AppxPackagedFile>
